@@ -14,6 +14,13 @@ score = 0
 function draw() {
      check_sketch()
 
+     strokeWeight(10)
+     stroke(0)
+
+     if(mouseIsPressed) {
+          line(pmouseX,pmouseY,mouseX,mouseY)
+     }
+
      if(Element_of_array == drawn_sketch){
           answer_holder = "set"
           score = score+1
@@ -56,15 +63,6 @@ function setup(){
 
 function preload(){
     classifier = ml5.imageClassifier("DoodleNet")
-}
-
-function draw(){
-     strokeWeight(10)
-     stroke(0)
-
-     if(mouseIsPressed) {
-          line(pmouseX,pmouseY,mouseX,mouseY)
-     }
 }
 
 function classifyCanvas(){
