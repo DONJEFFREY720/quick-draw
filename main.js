@@ -31,7 +31,7 @@ function draw() {
 function check_sketch(){
      timer_counter = timer_counter+1
      document.getElementById("timer").innerHTML = " Time Left : " +timer_counter
-     console.log("GIVEN TIME :" + timer_counter)
+     //console.log("GIVEN TIME :" + timer_counter)
 
      if(timer_counter == 400){
           timer_counter = 0
