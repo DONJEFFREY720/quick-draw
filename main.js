@@ -76,8 +76,9 @@ function gotResults(error,results){
 
      else{
           console.log(results)
-          document.getElementById("my_sketch").innerHTML = "LABEL : "+results[0].label
-          document.getElementById("confidence").innerHTML = "CONFIDENCE : "+Math.round(results[0].confidence*100) + '%'
+          document.getElementById("my_sketch").innerHTML = "Your Sketch : "+results[0].label
+          document.getElementById("confidence").innerHTML = "Confidence : "+Math.round(results[0].confidence*100) + '%'
+          document.getElementById("sketch_given").innerHTML = " Sketch to be drawn : "+Element_of_array;
 
           utterThis = new SpeechSynthesisUtterance(results[0].label) 
           synth.speak(utterThis)
